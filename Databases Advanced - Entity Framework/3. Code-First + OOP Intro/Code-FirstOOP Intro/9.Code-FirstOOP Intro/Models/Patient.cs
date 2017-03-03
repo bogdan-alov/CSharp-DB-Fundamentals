@@ -1,10 +1,8 @@
 ﻿namespace _9.Code_FirstOOP_Intro
 {
+    using Models;
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     public class Patient
     {
         public int Id { get; set; }
@@ -25,5 +23,7 @@
         public HashSet<Diagnose> Diagnoses { get; set; }
 
         public HashSet<Visititation> Visitations { get; set; }
+
+        public HashSet<Medicament> Medicaments { get; set; }
     }
 }

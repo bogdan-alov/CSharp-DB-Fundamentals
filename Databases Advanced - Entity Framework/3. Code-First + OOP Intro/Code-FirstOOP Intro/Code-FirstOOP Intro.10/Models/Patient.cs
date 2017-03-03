@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using Code_FirstOOP_Intro._10.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,6 +28,8 @@ namespace Code_FirstOOP_Intro._10
         public HashSet<Diagnose> Diagnoses { get; set; }
 
         public HashSet<Visitation> Visitations { get; set; }
+
+        public HashSet<Medicament> Medicaments { get; set; }
 
 
     }

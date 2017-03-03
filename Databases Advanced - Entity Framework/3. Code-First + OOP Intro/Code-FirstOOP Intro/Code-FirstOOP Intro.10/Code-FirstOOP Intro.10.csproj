@@ -57,6 +57,7 @@
     <Compile Include="Models\Diagnose.cs" />
     <Compile Include="Models\Doctor.cs" />
     <Compile Include="HospitalContext.cs" />
+    <Compile Include="Models\Medicament.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

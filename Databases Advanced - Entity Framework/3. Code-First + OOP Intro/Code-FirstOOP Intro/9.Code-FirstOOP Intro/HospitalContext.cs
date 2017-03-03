@@ -1,9 +1,7 @@
 namespace _9.Code_FirstOOP_Intro
 {
-    using System;
+    using Models;
     using System.Data.Entity;
-    using System.Linq;
-
     public class HospitalContext : DbContext
     {
         // Your context has been configured to use a 'HospitalContext' connection string from your application's 
@@ -15,11 +13,14 @@ namespace _9.Code_FirstOOP_Intro
         public HospitalContext()
             : base("name=HospitalContext")
         {
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<HospitalContext>());
         }
         public virtual DbSet<Patient> Patients { get; set; }
 
         public virtual DbSet<Diagnose> Diagnoses { get; set; }
         public virtual DbSet<Visititation> Visitations { get; set; }
+
+        public virtual DbSet<Medicament> Medicaments { get; set; }
         // Add a DbSet for each entity type that you want to include in your model. For more information 
         // on configuring and using a Code First model, see http://go.microsoft.com/fwlink/?LinkId=390109.
 

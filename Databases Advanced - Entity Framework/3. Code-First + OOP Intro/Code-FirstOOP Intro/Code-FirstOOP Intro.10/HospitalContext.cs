@@ -1,5 +1,6 @@
 namespace Code_FirstOOP_Intro._10
 {
+    using Models;
     using System;
     using System.Data.Entity;
     using System.Linq;
@@ -15,7 +16,7 @@ namespace Code_FirstOOP_Intro._10
         public HospitalContext()
             : base("name=HospitalContext")
         {
-            
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<HospitalContext>());
         }
 
 
@@ -23,7 +24,7 @@ namespace Code_FirstOOP_Intro._10
 
         public virtual DbSet<Diagnose> Diagnoses { get; set; }
         public virtual DbSet<Visitation> Visitations { get; set; }
-
+        public virtual DbSet<Medicament> Medicaments { get; set; }
         public virtual DbSet<Doctor> Doctors { get; set; }
 
         //public virtual DbSet<Patient> Patients { get; set; }
