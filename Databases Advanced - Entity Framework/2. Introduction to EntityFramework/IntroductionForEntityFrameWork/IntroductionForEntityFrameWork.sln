@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntroductionForEntityFrameWork", "IntroductionForEntityFrameWork\IntroductionForEntityFrameWork.csproj", "{65ED9FAF-5815-40B6-AEC3-D480CD40FE4C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FckImStewpid", "FckImStewpid\FckImStewpid.csproj", "{EE523D5C-069A-43B5-B3C7-58DD21D54BD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65ED9FAF-5815-40B6-AEC3-D480CD40FE4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65ED9FAF-5815-40B6-AEC3-D480CD40FE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65ED9FAF-5815-40B6-AEC3-D480CD40FE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65ED9FAF-5815-40B6-AEC3-D480CD40FE4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE523D5C-069A-43B5-B3C7-58DD21D54BD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE523D5C-069A-43B5-B3C7-58DD21D54BD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE523D5C-069A-43B5-B3C7-58DD21D54BD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE523D5C-069A-43B5-B3C7-58DD21D54BD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

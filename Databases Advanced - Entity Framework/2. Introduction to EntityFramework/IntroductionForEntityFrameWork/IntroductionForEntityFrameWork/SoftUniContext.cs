@@ -1,0 +1,80 @@
+namespace IntroductionForEntityFrameWork
+{
+    using System;
+    using System.Data.Entity;
+    using System.ComponentModel.DataAnnotations.Schema;
+    using System.Linq;
+
+    public partial class SoftUniContext : DbContext
+    {
+        public SoftUniContext()
+            : base("name=SoftUniEntities")
+        {
+        }
+
+        public virtual DbSet<Address> Addresses { get; set; }
+        public virtual DbSet<Department> Departments { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Project> Projects { get; set; }
+        public virtual DbSet<Town> Towns { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Address>()
+                .Property(e => e.AddressText)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Department>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Department>()
+                .HasMany(e => e.Employees)
+                .WithRequired(e => e.Department)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Employee>()
+                .Property(e => e.FirstName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Employee>()
+                .Property(e => e.LastName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Employee>()
+                .Property(e => e.MiddleName)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Employee>()
+                .Property(e => e.JobTitle)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Employee>()
+                .Property(e => e.Salary)
+                .HasPrecision(19, 4);
+
+            modelBuilder.Entity<Employee>()
+                .HasMany(e => e.Employees)
+                .WithOptional(e => e.Manager)
+                .HasForeignKey(e => e.ManagerID);
+
+            modelBuilder.Entity<Employee>()
+                .HasMany(e => e.Employees11)
+                .WithOptional(e => e.Employee2)
+                .HasForeignKey(e => e.ManagerID);
+
+            modelBuilder.Entity<Employee>()
+                .HasMany(e => e.Projects)
+                .WithMany(e => e.Employees)
+                .Map(m => m.ToTable("EmployeesProjects").MapLeftKey("EmployeeID").MapRightKey("ProjectID"));
+
+            modelBuilder.Entity<Project>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Town>()
+                .Property(e => e.Name)
+                .IsUnicode(false);
+        }
+    }
+}
