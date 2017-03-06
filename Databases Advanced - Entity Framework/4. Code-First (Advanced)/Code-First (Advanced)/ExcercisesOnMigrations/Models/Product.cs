@@ -11,15 +11,14 @@ namespace ExcercisesOnMigrations.Models
         public Product()
         {
             this.SalesByProduct = new HashSet<Sale>();
+            this.Description = "No description";
         }
         public int Id { get; set; }
 
         public string Name { get; set; }
 
+        public string Description { get; set; }
         public int Quantity { get; set; }
-
-        public string Description { get; set; } = "No description";
-
         public decimal Price { get; set; }
 
         public ICollection<Sale> SalesByProduct { get; set; }

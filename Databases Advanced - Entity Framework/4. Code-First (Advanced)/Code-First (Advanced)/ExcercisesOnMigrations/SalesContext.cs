@@ -1,6 +1,6 @@
 namespace ExcercisesOnMigrations
 {
-    using Migrations;
+    
     using Models;
     using System;
     using System.Data.Entity;
@@ -17,10 +17,11 @@ namespace ExcercisesOnMigrations
         public SalesContext()
             : base("name=SalesContext")
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<SalesContext, Configuration>());
+
+            //Database.SetInitializer(new InitializeAndSeed());
         }
 
-        public class SeedAndInitialize : DropCreateDatabaseAlways<SalesContext>
+       /* public class InitializeAndSeed : CreateDatabaseIfNotExists<SalesContext>
         {
             protected override void Seed(SalesContext context)
             {
@@ -202,7 +203,7 @@ namespace ExcercisesOnMigrations
 
                 base.Seed(context);
             }
-        }
+        } */
         public virtual DbSet<Product> Products { get; set; }
 
         public virtual DbSet<Customer> Customers { get; set; }

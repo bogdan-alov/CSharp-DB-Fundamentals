@@ -1,5 +1,6 @@
 namespace ExcercisesOnMigrations.Migrations
 {
+    using Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -9,7 +10,8 @@ namespace ExcercisesOnMigrations.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationDataLossAllowed = true;
             ContextKey = "ExcercisesOnMigrations.SalesContext";
         }
 
@@ -27,6 +29,17 @@ namespace ExcercisesOnMigrations.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+             context.Customers.AddOrUpdate(x => x.Id,
+                new Customer() { Id = 1,Email = "goshko@abv.bg" , CreditCardNumber = "123456789",FirstName = "Goshko", LastName = "Goshkov" },
+                new Customer() { Id = 2, Email = "Peshko@abv.bg", CreditCardNumber = "123456789", FirstName = "Peshko", LastName = "Peshev" },
+                new Customer() { Id = 3, Email = "john@abv.bg", CreditCardNumber = "123456789", FirstName = "John", LastName = "Cena" },
+                new Customer() { Id = 4, Email = "morron@abv.bg", CreditCardNumber = "123456789", FirstName = "Morron", LastName = "Morronov" },
+                new Customer() { Id = 5, Email = "dude@abv.bg", CreditCardNumber = "123456789", FirstName = "Dude", LastName = "Dudov" }
+                );
+
+            context.SaveChanges();
+            base.Seed(context);
         }
     }
 }

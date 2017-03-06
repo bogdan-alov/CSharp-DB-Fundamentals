@@ -54,17 +54,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201703051849357_InitialCreate.cs" />
-    <Compile Include="Migrations\201703051849357_InitialCreate.Designer.cs">
-      <DependentUpon>201703051849357_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201703061807577_InitialCreate.cs" />
+    <Compile Include="Migrations\201703061807577_InitialCreate.Designer.cs">
+      <DependentUpon>201703061807577_InitialCreate.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703051859246_ProductsAddColumnDescription.cs" />
-    <Compile Include="Migrations\201703051859246_ProductsAddColumnDescription.Designer.cs">
-      <DependentUpon>201703051859246_ProductsAddColumnDescription.cs</DependentUpon>
+    <Compile Include="Migrations\201703061812371_ProductsAddColumnDescription.cs" />
+    <Compile Include="Migrations\201703061812371_ProductsAddColumnDescription.Designer.cs">
+      <DependentUpon>201703061812371_ProductsAddColumnDescription.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201703051900584_SalesAddDateDefault.cs" />
-    <Compile Include="Migrations\201703051900584_SalesAddDateDefault.Designer.cs">
-      <DependentUpon>201703051900584_SalesAddDateDefault.cs</DependentUpon>
+    <Compile Include="Migrations\201703061814539_SalesAddDefaultDate.cs" />
+    <Compile Include="Migrations\201703061814539_SalesAddDefaultDate.Designer.cs">
+      <DependentUpon>201703061814539_SalesAddDefaultDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703061821407_CustomersAddDefaultAge.cs" />
+    <Compile Include="Migrations\201703061821407_CustomersAddDefaultAge.Designer.cs">
+      <DependentUpon>201703061821407_CustomersAddDefaultAge.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -80,15 +84,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703051849357_InitialCreate.resx">
-      <DependentUpon>201703051849357_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703061807577_InitialCreate.resx">
+      <DependentUpon>201703061807577_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703051859246_ProductsAddColumnDescription.resx">
-      <DependentUpon>201703051859246_ProductsAddColumnDescription.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703061812371_ProductsAddColumnDescription.resx">
+      <DependentUpon>201703061812371_ProductsAddColumnDescription.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201703051900584_SalesAddDateDefault.resx">
-      <DependentUpon>201703051900584_SalesAddDateDefault.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703061814539_SalesAddDefaultDate.resx">
+      <DependentUpon>201703061814539_SalesAddDefaultDate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703061821407_CustomersAddDefaultAge.resx">
+      <DependentUpon>201703061821407_CustomersAddDefaultAge.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LastMigration-script.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
