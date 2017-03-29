@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<catalog>
+  <albums>
+    <album>
+      <name>UNG</name>
+      <artist>Dim4ou</artist>
+      <year>2016</year>
+      <producer>Dim4ou</producer>
+      <price>13.00</price>
+      <songs>
+        <song>
+          <title>Kyde si ti</title>
+          <duration>4.40</duration>
+        </song>
+        <song>
+          <title>Koi</title>
+          <duration>3.20</duration>
+        </song>
+        <song>
+          <title>Keep calm</title>
+          <duration>4.20</duration>
+        </song>
+        <song>
+          <title>420</title>
+          <duration>4.20</duration>
+        </song>
+      </songs>
+    </album>
+  </albums>
+</catalog>

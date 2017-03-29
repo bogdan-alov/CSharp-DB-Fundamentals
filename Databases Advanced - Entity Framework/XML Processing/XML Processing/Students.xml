@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<students>
+  <student>
+    <name>Georgi Georgiev</name>
+    <gender>Male</gender>
+    <birthDate>1999/12/12</birthDate>
+    <phoneNumber>08812131615</phoneNumber>
+    <email>georgiev@gmail.com</email>
+    <university>Software University(SoftUni)</university>
+    <facultyNumber>987123456</facultyNumber>
+    <exams>
+      <exam>
+        <name>Programming Basics</name>
+        <dateTaken>2016/12/12</dateTaken>
+        <grade>6.0</grade>
+      </exam>
+      <exam>
+        <name>SQL Basics</name>
+        <dateTaken>16/02/2017</dateTaken>
+        <grade>6.0</grade>
+      </exam>
+    </exams>
+  </student>
+  <student>
+    <name>Pesho Peshev</name>
+    <gender>Male</gender>
+    <birthDate>1998/12/12</birthDate>
+    <email>peshev@gmail.com</email>
+    <university>Software University(SoftUni)</university>
+    <facultyNumber>987123456</facultyNumber>
+    <exams>
+      <exam>
+        <name>Programming Basics</name>
+        <dateTaken>2016/12/12</dateTaken>
+        <grade>6.0</grade>
+      </exam>
+      <exam>
+        <name>SQL Basics</name>
+        <dateTaken>2017/04/09</dateTaken>
+        <grade>6.0</grade>
+      </exam>
+      <exam>
+        <name>Entity Framework</name>
+        <dateTaken>09/04/2017</dateTaken>
+        <grade>6.0</grade>
+      </exam>
+    </exams>
+  </student>
+  <student>
+    <name>Gergana Gerganova</name>
+    <gender>Female</gender>
+    <birthDate>1998/06/03</birthDate>
+    <phoneNumber>08812131615</phoneNumber>
+    <email>gerganak@gmail.com</email>
+    <university>Software University(SoftUni)</university>
+    <facultyNumber>987123456</facultyNumber>
+    <exams>
+      <exam>
+        <name>Programming Basics</name>
+        <dateTaken>12/12/2016</dateTaken>
+        <grade>6.0</grade>
+      </exam>
+    </exams>
+  </student>
+</students>
